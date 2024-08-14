@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla JS</title>
+    <style>
+      .app {
+        text-align: center;
+      }
+      .green-btn {
+        color: white;
+        background-color: green;
+      }
+    </style>
   </head>
   <body>
-    <button id="my-button" onclick="changeButtonText()">Click Me</button>
+    <div class="app">
+      <button id="my-button" onclick="changeButton('my-button')">
+        Click Me
+      </button>
+    </div>
     <script>
-      function changeButtonText() {
-        const myButton = document.getElementById('my-button');
-        myButton.innerHTML = 'Hello World!';
+      function changeButton(id) {
+        const myButton = document.getElementById(id);
+        myButton.innerHTML = 'Hello World!'; // Здесь меняется текст кнопки на тот, который задан в кавычках
+        myButton.className = 'green-btn'; // Тут добавляем к кнопке стили, название стилей в кавычках
       }
     </script>
   </body>
