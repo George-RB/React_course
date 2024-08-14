@@ -6,6 +6,12 @@
     <title>Vanilla JS</title>
   </head>
   <body>
-    <button>Click Me</button>
+    <button id="my-button" onclick="changeButtonText()">Click Me</button>
+    <script>
+      function changeButtonText() {
+        const myButton = document.getElementById('my-button');
+        myButton.innerHTML = 'Hello World!';
+      }
+    </script>
   </body>
 </html>
